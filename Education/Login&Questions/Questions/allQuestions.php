@@ -103,6 +103,7 @@ $max_answers = $stmt->fetch(PDO::FETCH_ASSOC)['max_answers'];
                         ?>
                     </div>
                 </div>
+                
 
                 <div id="form<?php echo $count; ?>" class="commentbox" style="display: none;">
                     <img src="user1.png" alt="user" class="userImg">
@@ -121,6 +122,7 @@ $max_answers = $stmt->fetch(PDO::FETCH_ASSOC)['max_answers'];
                         </form>
                     </div>
                 </div>
+                
 
                 <script>
                 ClassicEditor.create(document.querySelector('#content<?php echo $count; ?>')).then(editor => {
@@ -179,7 +181,14 @@ $max_answers = $stmt->fetch(PDO::FETCH_ASSOC)['max_answers'];
         sessionStorage.setItem('who_asked', who_asked);
         sessionStorage.setItem('question', question);
     }
+    
 </script>
+<script>
+    function viewAnswers() {
+        document.getElementById('viewAnswersForm').submit();
+    }
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
