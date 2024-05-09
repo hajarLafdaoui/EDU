@@ -27,7 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>View Answers</title>
     <!-- Add any CSS styling if needed -->
 </head>
-<body>
+<body> 
+    
     <h1>Answers for the Question: <?php echo $question; ?></h1>
     <?php if (isset($answers) && !empty($answers)) : ?>
         <ul>
